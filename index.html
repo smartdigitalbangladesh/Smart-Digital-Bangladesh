@@ -1,110 +1,109 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-  <title>Smart Digital File Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমার সেবা</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
     }
     header {
-      background: #4CAF50;
+      background-color: #0f172a;
       color: white;
       padding: 20px;
       text-align: center;
     }
     nav {
-      background: #333;
+      background-color: #1e293b;
       padding: 10px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
-    .container {
-      padding: 20px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .product {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-    .button {
-      background: #4CAF50;
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
       color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .services {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
     }
     footer {
-      background: #333;
+      background-color: #0f172a;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Smart Digital Bangladesh</h1>
-    <p>ডিজিটাল ফাইল কিনুন সহজে — বিকাশে পেমেন্ট করুন, সাথে সাথে ফাইল হাতে পান।</p>
+    <h1>আমার সেবা</h1>
+    <p>ডিজিটাল সেবা, সবার জন্য</p>
   </header>
-
   <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#payment">Payment</a>
-    <a href="#contact">Contact</a>
+    <a href="#">হোম</a>
+    <a href="#">সেবা সমূহ</a>
+    <a href="#">ই-সেন্টার</a>
+    <a href="#">যোগাযোগ</a>
+    <a href="#">লগইন</a>
   </nav>
-
-  <div class="container" id="home">
-    <h2>Welcome!</h2>
-    <p>আপনার প্রয়োজনীয় ডিজিটাল ফাইল খুব সহজেই কিনতে পারেন আমাদের ওয়েবসাইট থেকে।</p>
-  </div>
-
-  <div class="container" id="products">
-    <h2>Our Products</h2>
-    <div class="product">
-      <h3>Premium Bangla Font Collection (30+ Fonts)</h3>
-      <p>ফাইল ফরম্যাট: .Zip<br />সাইজ: 12 MB<br />মূল্য: ৫০ টাকা</p>
-      <p><strong>পেমেন্ট করার নিয়ম:</strong><br />
-      বিকাশ নম্বর: 01755332217<br />
-      রকেট নম্বর: 01755332217</p>
-      <a href="#payment" class="button">Buy Now</a>
+  <section class="hero">
+    <h1>সব ডিজিটাল সেবা এক জায়গায়</h1>
+    <p>আমার সেবা প্ল্যাটফর্মের মাধ্যমে সহজেই সরকারি ও বেসরকারি সেবা নিন</p>
+  </section>
+  <section class="services">
+    <div class="service-card">
+      <h3>জন্মনিবন্ধন</h3>
+      <p>নতুন আবেদন, সংশোধন ও প্রিন্ট</p>
     </div>
-  </div>
-
-  <div class="container" id="payment">
-    <h2>Payment Instructions</h2>
-    <p>আপনার পেমেন্ট নিশ্চিত করতে অনুগ্রহ করে নিচের নির্দেশনা অনুসরণ করুন:</p>
-    <ul>
-      <li>বিকাশে পেমেন্ট করুন: 01755332217</li>
-      <li>রকেটে পেমেন্ট করুন: 01755332217</li>
-      <li>পেমেন্ট করার পরে <a href="https://forms.gle/your-google-form-link" target="_blank">এই ফর্মটি পূরণ করুন</a></li>
-    </ul>
-  </div>
-
-  <div class="container" id="contact">
-    <h2>Contact Us</h2>
-    <p>আপনার যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করুন:</p>
-    <p>Email: farhadreza289@gmail.com</p>
-    <p>WhatsApp: +8801755332217</p>
-    <p>Facebook Page: <a href="https://facebook.com/YourPage" target="_blank">facebook.com/YourPage</a></p>
-  </div>
-
+    <div class="service-card">
+      <h3>সনদপত্র</h3>
+      <p>চারিত্রিক, অভিভাবকত্ব, অনাপত্তি ইত্যাদি</p>
+    </div>
+    <div class="service-card">
+      <h3>ই-ট্রেনিং</h3>
+      <p>বিনামূল্যে আইটি প্রশিক্ষণ কোর্স</p>
+    </div>
+    <div class="service-card">
+      <h3>ই-সেন্টার লোকেশন</h3>
+      <p>নিকটবর্তী সেন্টারের ঠিকানা ও যোগাযোগ</p>
+    </div>
+  </section>
   <footer>
-    &copy; 2025 Smart Digital File Store. All rights reserved.
+    <p>&copy; ২০২৫ আমার সেবা | সর্বস্বত্ব সংরক্ষিত</p>
   </footer>
-
 </body>
 </html>
