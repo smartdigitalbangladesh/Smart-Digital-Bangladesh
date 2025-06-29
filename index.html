@@ -1,109 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>আমার সেবা</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Digital Bangladesh</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f5f9;
-    }
-    header {
-      background-color: #0f172a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #1e293b;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .services {
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .service-card h3 {
-      margin-bottom: 10px;
-    }
-    footer {
-      background-color: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
+    nav { background: #333; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { padding: 20px; max-width: 900px; margin: auto; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .product { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .button { background: #4CAF50; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; font-weight: bold; cursor: pointer; }
+    .button:hover { background-color: #45a049; }
+    footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 40px; }
+    @media (max-width: 600px) { nav a { display: block; margin: 8px 0; } }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: #444; min-width: 160px; z-index: 1; text-align: left; border-radius: 5px; }
+    .dropdown-content a { color: white; padding: 10px 15px; text-decoration: none; display: block; }
+    .dropdown-content a:hover { background-color: #555; }
+    .dropdown:hover .dropdown-content { display: block; }
+    img { width: 100%; max-width: 400px; height: auto; border-radius: 5px; }
+    form input, form textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-top: 4px; }
+    form label { font-weight: bold; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>আমার সেবা</h1>
-    <p>ডিজিটাল সেবা, সবার জন্য</p>
+
+  <header id="home">
+    <h1>Smart Digital Bangladesh</h1>
+    <p>ডিজিটাল ফাইল কিনুন সহজে — বিকাশে পেমেন্ট করুন, সাথে সাথে ফাইল হাতে পান।</p>
   </header>
+
   <nav>
-    <a href="#">হোম</a>
-    <a href="#">সেবা সমূহ</a>
-    <a href="#">ই-সেন্টার</a>
-    <a href="#">যোগাযোগ</a>
-    <a href="#">লগইন</a>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#order">Order</a>
+    <a href="#payment">Payment</a>
+    <a href="#login">Login</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <section class="hero">
-    <h1>সব ডিজিটাল সেবা এক জায়গায়</h1>
-    <p>আমার সেবা প্ল্যাটফর্মের মাধ্যমে সহজেই সরকারি ও বেসরকারি সেবা নিন</p>
-  </section>
-  <section class="services">
-    <div class="service-card">
-      <h3>জন্মনিবন্ধন</h3>
-      <p>নতুন আবেদন, সংশোধন ও প্রিন্ট</p>
+
+  <div class="container" id="products">
+    <h2>Md. Farhad Hossain — Welcome</h2>
+    <div class="product-grid">
+      <div class="product">
+        <h3>বাংলা লেখা কনভার্টার</h3>
+        <img src="images/OIP.WEBP" alt="">
+        <p><a href="#" class="button">মাত্রঃ ১০ টাকা</a></p>
+      </div>
+      <div class="product">
+        <h3>নমুনা ওয়ার্ড ফাইল</h3>
+        <img src="images/farhad.png" alt="নমুনা ওয়ার্ড ফাইল">
+        <p><a href="#" class="button">বিস্তারিত দেখুন</a></p>
+      </div>
+      <div class="product">
+        <h3>নমুনা ইলাস্ট্রেটর ফাইল</h3>
+        <img src="images/product3.jpg" alt="নমুনা ইলাস্ট্রেটর ফাইল">
+        <p><a href="#" class="button">বিস্তারিত দেখুন</a></p>
+      </div>
+      <div class="product">
+        <h3>প্রয়োজনীয় ফন্ট</h3>
+        <img src="images/product4.jpg" alt="প্রয়োজনীয় ফন্ট">
+        <p><a href="#" class="button">বিস্তারিত দেখুন</a></p>
+      </div>
     </div>
-    <div class="service-card">
-      <h3>সনদপত্র</h3>
-      <p>চারিত্রিক, অভিভাবকত্ব, অনাপত্তি ইত্যাদি</p>
-    </div>
-    <div class="service-card">
-      <h3>ই-ট্রেনিং</h3>
-      <p>বিনামূল্যে আইটি প্রশিক্ষণ কোর্স</p>
-    </div>
-    <div class="service-card">
-      <h3>ই-সেন্টার লোকেশন</h3>
-      <p>নিকটবর্তী সেন্টারের ঠিকানা ও যোগাযোগ</p>
-    </div>
-  </section>
+  </div>
+
+  <div class="container" id="order">
+    <h2>অর্ডার করুন</h2>
+    <form action="https://formspree.io/f/xrbkrqlk" method="POST">
+      <label for="oName">নাম:</label>
+      <input type="text" id="oName" name="name" required>
+      <label for="oPhone">মোবাইল নাম্বার:</label>
+      <input type="text" id="oPhone" name="phone" required>
+      <label for="oProduct">প্রোডাক্টের নাম:</label>
+      <input type="text" id="oProduct" name="product" required>
+      <label for="oMessage">অতিরিক্ত মন্তব্য:</label>
+      <textarea id="oMessage" name="message" rows="4"></textarea>
+      <button type="submit" class="button">অর্ডার পাঠান</button>
+    </form>
+  </div>
+
+  <div class="container" id="payment">
+    <h2>পেমেন্ট তথ্য দিন</h2>
+    <form action="https://formspree.io/f/xrbkrqlk" method="POST">
+      <label for="pName">আপনার নাম:</label>
+      <input type="text" id="pName" name="name" required>
+      <label for="pAmount">পেমেন্ট পরিমাণ (টাকা):</label>
+      <input type="number" id="pAmount" name="amount" required>
+      <label for="pTrx">ট্রানজেকশন আইডি:</label>
+      <input type="text" id="pTrx" name="transaction" required>
+      <label for="pProduct">প্রোডাক্টের নাম:</label>
+      <input type="text" id="pProduct" name="product" required>
+      <button type="submit" class="button">তথ্য সাবমিট করুন</button>
+    </form>
+  </div>
+
+  <div class="container" id="login">
+    <h2>লগইন করুন</h2>
+    <form id="loginForm">
+      <label for="email">ইমেইল:</label>
+      <input type="email" id="email" required>
+      <label for="password">পাসওয়ার্ড:</label>
+      <input type="password" id="password" required>
+      <button type="submit" class="button">লগইন</button>
+    </form>
+    <p id="loginMessage" style="margin-top:10px;font-weight:bold;"></p>
+  </div>
+
+  <div class="container" id="contact" style="background:#4CAF50;color:white;text-align:center;border-radius:5px;">
+    <h2>Contact Us</h2>
+    <p>আপনার যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করুন:</p>
+    <p>Email: <a href="mailto:farhadreza289@gmail.com" style="color:#fff;text-decoration:underline;">farhadreza289@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/8801755332217" target="_blank" style="color:#fff;text-decoration:underline;">+8801755332217</a></p>
+    <p>Facebook Page: <a href="https://facebook.com/YourPage" target="_blank" style="color:#fff;text-decoration:underline;">facebook.com/YourPage</a></p>
+  </div>
+
   <footer>
-    <p>&copy; ২০২৫ আমার সেবা | সর্বস্বত্ব সংরক্ষিত</p>
+    &copy; 2025 Smart Digital File Store. All rights reserved.
   </footer>
+
+  <div id="bkashModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999;">
+    <div style="background:white; max-width:500px; margin:100px auto; padding:20px; border-radius:10px; position:relative;">
+      <h3 style="text-align:center;">পেমেন্ট সাবমিশন</h3>
+      <p>➤ আপনি বিকাশে নিচের নাম্বারে টাকা পাঠিয়ে নিচের ফর্মটি পূরণ করুন।</p>
+      <p style="background:#f4f4f4;padding:10px;border-left:4px solid #4CAF50;"><strong>বিকাশ নম্বর:</strong> 01755332217</p>
+      <form>
+        <label>আপনার নাম:</label>
+        <input type="text" required>
+        <label>বিকাশ নাম্বার (যে নাম্বার থেকে পাঠানো হয়েছে):</label>
+        <input type="text" required>
+        <label>ট্রানজেকশন আইডি:</label>
+        <input type="text" required>
+        <label>আপনার ইমেইল (যেখানে ফাইল যাবে):</label>
+        <input type="email" required>
+        <button type="submit" class="button">সাবমিট করুন</button>
+      </form>
+      <p id="bkashMsg" style="font-weight:bold; color:green; margin-top:10px;"></p>
+      <button onclick="document.getElementById('bkashModal').style.display='none'" class="button" style="background:#f44336; margin-top:10px;">বন্ধ করুন</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('a.button').forEach(button => {
+        button.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.getElementById("bkashModal").style.display = "block";
+        });
+      });
+
+      document.getElementById("loginForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const pass  = document.getElementById("password").value;
+        const msg   = document.getElementById("loginMessage");
+        if(email === "user@example.com" && pass === "123456") {
+          msg.style.color = "green";
+          msg.textContent = "লগইন সফল!";
+        } else {
+          msg.style.color = "red";
+          msg.textContent = "ইমেইল বা পাসওয়ার্ড ভুল!";
+        }
+        e.target.reset();
+      });
+    });
+  </script>
+
 </body>
 </html>
